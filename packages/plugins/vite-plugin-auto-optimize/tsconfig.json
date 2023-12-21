@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "target": "ES2022",
+    "module": "esnext",
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "Node",
+    "lib": ["ES2022"],
+    "composite": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "types": ["node"]
+  },
+  "include": ["./src"]
+}

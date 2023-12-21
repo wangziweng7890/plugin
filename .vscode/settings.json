@@ -1,0 +1,93 @@
+{
+  "prettier.enable": false,
+  "editor.formatOnSave": false,
+  "editor.formatOnType": true,
+  "tabnine.experimentalAutoImports": true,
+  "files.associations": {
+      "*.vue": "vue",
+      "*.wpy": "vue",
+      "*.wxml": "html",
+      "*.wxss": "css"
+  },
+  "workbench.editor.showTabs": "multiple",
+  "eslint.alwaysShowStatus": true,
+  "eslint.quiet": true,
+  "eslint.options": {
+      "extensions": [
+          ".js",
+          ".vue"
+      ]
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit"
+  },
+  "git.enableSmartCommit": true,
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.showAbbreviationSuggestions": true,
+  "emmet.showExpandedAbbreviation": "always",
+  "emmet.includeLanguages": {
+      "vue-html": "html",
+      "wpy": "html"
+  },
+  // 主题颜色
+  // "workbench.colorTheme": "Monokai",
+  "git.confirmSync": false,
+  "explorer.confirmDelete": false,
+  "editor.wordWrap": "on",
+  "editor.detectIndentation": false,
+  // 重新设定tabsize
+  "editor.tabSize": 2,
+  // 失去焦点后自动保存
+  // "files.autoSave": "onFocusChange",
+  // 在使用搜索功能时，将这些文件夹/文件排除在外
+  "search.exclude": {
+      "**/node_modules": true,
+      "**/bower_components": true,
+      "**/target": true,
+      "**/logs": true
+  },
+  // 这些文件将不会显示在工作空间中
+  "files.exclude": {
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/CVS": true,
+      "**/.DS_Store": true
+  },
+  "guides.normal.color.dark": "rgba(91, 91, 91, 0.6)",
+  "guides.normal.color.light": "rgba(220, 220, 220, 0.7)",
+  "guides.active.color.dark": "rgba(210, 210, 210, 0.6)",
+  "guides.active.color.light": "rgba(200, 100, 100, 0.7)",
+  "guides.active.style": "dashed",
+  "guides.normal.style": "dashed",
+  "guides.stack.style": "dashed",
+  "editor.guides.indentation": false,
+  "stylelint.validate": [
+      "less",
+      "css",
+      "postcss",
+      "scss",
+      "vue"
+  ],
+  "stylelint.snippet": [
+      "css",
+      "less",
+      "postcss",
+      "scss"
+  ],
+  "cSpell.userWords": [
+      "esbuild"
+  ],
+  "security.workspace.trust.untrustedFiles": "open",
+  "gitlens.gitCommands.skipConfirmations": [
+      "fetch:command",
+      "switch:command",
+      "stash-push:command"
+  ],
+  "i18n-ally.localesPaths": [
+      "locales"
+  ],
+  "volar.inlayHints.eventArgumentInInlineHandlers": false,
+  "vue.codeActions.enabled": false
+}

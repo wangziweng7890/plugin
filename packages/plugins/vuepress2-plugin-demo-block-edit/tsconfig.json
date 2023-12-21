@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "target": "ES2020",
+    "skipLibCheck": true,
+    "module": "esnext",
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "Node",
+    "lib": ["ES2020"],
+    "composite": true,
+    "strict": false,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "noImplicitReturns": false,
+    "declaration": true,  
+    "types": ["node"]
+  },
+  "include": ["./src"]
+}

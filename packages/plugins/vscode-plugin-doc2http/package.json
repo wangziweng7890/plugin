@@ -1,0 +1,315 @@
+{
+  "name": "doc2http",
+  "displayName": "doc2http",
+  "description": "auto generate http-request-template by api-docs",
+  "version": "0.2.0",
+  "publisher": "wangziweng7890",
+  "author": "wangziweng7890",
+  "engines": {
+    "vscode": "^1.64.2"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/wangziweng7890/monorepo/tree/master/packages/plugins/vscode-plugin-doc2http"
+  },
+  "homepage": "https://github.com/wangziweng7890/monorepo/tree/master/packages/plugins/vscode-plugin-doc2http",
+  "license": "MIT",
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "doc2http"
+  ],
+  "activationEvents": [
+    "onCommand:doc2http.config",
+    "workspaceContains:.vscode/doc2http.json"
+  ],
+  "icon": "resources/icon.png",
+  "main": "./dist/extension",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "doc2http",
+          "title": "doc2http",
+          "icon": "resources/remote-explorer.svg"
+        }
+      ]
+    },
+    "views": {
+      "doc2http": [
+        {
+          "id": "doc2httpExplorer",
+          "name": "doc2http",
+          "when": "doc2http.enabled"
+        }
+      ]
+    },
+    "configuration": {
+      "type": "object",
+      "title": "doc2http configuration",
+      "properties": {
+        "doc2http.printDebugLog": {
+          "type": "boolean",
+          "default": false,
+          "description": "print debug log on doc2http output channel.(reload vscode when change this)"
+        },
+        "doc2http.debug": {
+          "type": "boolean",
+          "default": false,
+          "description": "print debug log on doc2http output channel.(reload vscode when change this)"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "doc2http.config",
+        "title": "Config",
+        "category": "doc2http"
+      },
+      {
+        "command": "doc2http.cancelAllTransfer",
+        "title": "Cancel All Transfers",
+        "category": "doc2http"
+      },
+      {
+        "command": "doc2http.download",
+        "title": "to swrv",
+        "category": "doc2http",
+        "icon": {
+          "dark": "resources/dark/download-file.svg",
+          "light": "resources/light/download-file.svg"
+        }
+      },
+      {
+        "command": "doc2http.download.with.prefix",
+        "title": "to swrv with prefixPath",
+        "category": "doc2http",
+        "icon": {
+          "dark": "resources/dark/download-file.svg",
+          "light": "resources/light/download-file.svg"
+        }
+      },
+      {
+        "command": "doc2http.toAxios",
+        "title": "to Axios",
+        "category": "doc2http",
+        "icon": {
+          "dark": "resources/dark/download-file.svg",
+          "light": "resources/light/download-file.svg"
+        }
+      },
+      {
+        "command": "doc2http.toAxios.with.prefix",
+        "title": "to Axios with prefixPath",
+        "category": "doc2http",
+        "icon": {
+          "dark": "resources/dark/download-file.svg",
+          "light": "resources/light/download-file.svg"
+        }
+      },
+      {
+        "command": "doc2http.viewContent",
+        "title": "View Content",
+        "category": "doc2http"
+      },
+      {
+        "command": "doc2http.copyAsImportFn",
+        "title": "Copy As ImportFn",
+        "category": "doc2http"
+      },
+      {
+        "command": "doc2http.remoteExplorer.refresh",
+        "title": "Refresh",
+        "icon": {
+          "light": "resources/light/refresh.svg",
+          "dark": "resources/dark/refresh.svg"
+        }
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "doc2http.cancelAllTransfer",
+          "when": "doc2http.enabled"
+        },
+        {
+          "command": "doc2http.download",
+          "when": "false"
+        },
+        {
+          "command": "doc2http.download.with.prefix",
+          "when": "false"
+        },
+        {
+          "command": "doc2http.toAxios",
+          "when": "false"
+        },
+        {
+          "command": "doc2http.toAxios.with.prefix",
+          "when": "false"
+        },
+        {
+          "command": "doc2http.viewContent",
+          "when": "false"
+        },
+        {
+          "command": "doc2http.remoteExplorer.refresh",
+          "when": "doc2http.enabled"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "doc2http.download",
+          "group": "doc2http.trans@2",
+          "when": "doc2http.enabled && !explorerResourceIsRoot && resourceScheme == doc2http"
+        },
+        {
+          "command": "doc2http.download.with.prefix",
+          "group": "doc2http.trans@2",
+          "when": "doc2http.enabled && !explorerResourceIsRoot && resourceScheme == doc2http"
+        },
+        {
+          "command": "doc2http.toAxios",
+          "group": "doc2http.trans@2",
+          "when": "doc2http.enabled && !explorerResourceIsRoot && resourceScheme == doc2http"
+        },
+        {
+          "command": "doc2http.toAxios.with.prefix",
+          "group": "doc2http.trans@2",
+          "when": "doc2http.enabled && !explorerResourceIsRoot && resourceScheme == doc2http"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "doc2http.download",
+          "group": "doc2http.trans@2",
+          "when": "doc2http.enabled && resourceScheme == doc2http"
+        },
+        {
+          "command": "doc2http.download.with.prefix",
+          "group": "doc2http.trans@2",
+          "when": "doc2http.enabled && resourceScheme == doc2http"
+        },
+        {
+          "command": "doc2http.toAxios",
+          "group": "doc2http.trans@2",
+          "when": "doc2http.enabled && resourceScheme == doc2http"
+        },
+        {
+          "command": "doc2http.toAxios.with.prefix",
+          "group": "doc2http.trans@2",
+          "when": "doc2http.enabled && resourceScheme == doc2http"
+        },
+        {
+          "command": "doc2http.copyAsImportFn",
+          "when": "doc2http.enabled && resourceScheme == file && editorHasSelection",
+          "group": "9_cutcopypaste"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "doc2http.remoteExplorer.refresh",
+          "when": "view == doc2httpExplorer",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "doc2http.viewContent",
+          "group": "2_files",
+          "when": "view == doc2httpExplorer && viewItem == file"
+        },
+        {
+          "command": "doc2http.download",
+          "group": "3_trans@2",
+          "when": "view == doc2httpExplorer && viewItem != root"
+        },
+        {
+          "command": "doc2http.download.with.prefix",
+          "group": "3_trans@2",
+          "when": "view == doc2httpExplorer && viewItem != root"
+        },
+        {
+          "command": "doc2http.toAxios",
+          "group": "3_trans@2",
+          "when": "view == doc2httpExplorer && viewItem != root"
+        },
+        {
+          "command": "doc2http.toAxios.with.prefix",
+          "group": "3_trans@2",
+          "when": "view == doc2httpExplorer && viewItem != root"
+        }
+      ]
+    },
+    "jsonValidation": [
+      {
+        "fileMatch": ".vscode/doc2http.json",
+        "url": "./schema/config.schema.json"
+      }
+    ],
+    "resourceLabelFormatters": [
+      {
+        "scheme": "doc2http",
+        "formatting": {
+          "label": "${path}",
+          "separator": "/"
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "webpack --mode production && vite build",
+    "dev": "webpack --mode development --watch",
+    "dev2": "vite build --watch",
+    "ui": "vite dev",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/jest": "^23.3.5",
+    "@types/lru-cache": "^4.1.1",
+    "@types/node": "^14.0.0",
+    "@types/vscode": "1.40",
+    "@types/webpack-env": "^1.13.6",
+    "braces": ">=2.3.1",
+    "glob-parent": ">=5.1.2",
+    "jest": "^29.0.3",
+    "json-schema": ">=0.4.0",
+    "memfs": "^2.15.5",
+    "merge": ">=2.1.1",
+    "node-notifier": ">=8.0.1",
+    "rimraf": "^2.7.1",
+    "set-value": "^4.0.1",
+    "ts-loader": "^9.4.1",
+    "tslint": "^6.1.3",
+    "typescript": "^4.7.0",
+    "typescript-tslint-plugin": "^1.0.2",
+    "webpack": "^5.0.0",
+    "webpack-cli": "^4.7.0",
+    "yargs-parser": "^20.2.4"
+  },
+  "dependencies": {
+    "@babel/generator": "^7.23.0",
+    "@babel/parser": "^7.23.0",
+    "@babel/traverse": "^7.23.2",
+    "@babel/types": "^7.23.0",
+    "@sveltejs/vite-plugin-svelte": "^2.4.5",
+    "async": "^3.2.4",
+    "axios": "^1.4.0",
+    "eslint": "^8.51.0",
+    "fs-extra": "^10.1.0",
+    "ignore": "^5.1.4",
+    "joi": "^10.6.0",
+    "json-pretty-html": "^1.1.6",
+    "lodash.debounce": "^4.0.8",
+    "lru-cache": "^4.1.3",
+    "p-queue": "2.4.2",
+    "pinyin-pro": "^3.16.2",
+    "prettier": "^3.0.3",
+    "svelte": "^4.2.0",
+    "tmp": "^0.2.1",
+    "upath": "^2.0.1",
+    "vite": "^4.4.9"
+  }
+}

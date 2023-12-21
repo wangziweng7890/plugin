@@ -1,0 +1,35 @@
+{
+  "rootOption": {
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "your http name"
+      },
+      "projectId": {
+        "type": "string",
+        "description": "your apifox project id"
+      },
+      "context": {
+        "type": "string",
+        "description": "Relative path relative to the workspace root folder."
+      },
+      "authorization": {
+        "type": "string",
+        "description": "user authentication to apifox"
+      },
+      "host": {
+        "type": "string",
+        "description": "the href to apifox"
+      },
+      "port": {
+        "type": "number",
+        "description": "the href port to apifox"
+      },
+      "alias": {
+        "type": "object",
+        "description": "like vite` or webpack` alias"
+      }
+    },
+    "required": ["projectId", "context", "authorization", "host"]
+  }
+}

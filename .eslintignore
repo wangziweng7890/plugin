@@ -1,0 +1,3 @@
+node_modules
+packages/plugins/vscode-plugin-doc2http
+packages/components/src/Editor/style/tinymce.scss

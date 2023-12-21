@@ -1,0 +1,141 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:vue/vue3-recommended",
+    "plugin:vue/vue3-strongly-recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "@antfu"
+  ],
+  // "parser": "@typescript-eslint/parser",
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "vue",
+    "import"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/parsers": {
+      // 使用 TypeScript parser
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx"
+      ]
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      },
+      "typescript": {
+        "alwaysTryTypes": true
+        // "directory": "./tsconfig.json"
+      }
+    }
+  },
+  "rules": {
+    "semi": [
+      "error",
+      "never"
+    ],
+    "block-spacing": [
+      "error",
+      "always"
+    ],
+    "no-trailing-spaces": "error",
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "import/order": [
+      "error"
+    ],
+    "import/no-mutable-exports": [
+      "error"
+    ],
+    // "jsonc/indent": [
+    //   "error",
+    //   4
+    // ],
+    // "yml/indent": [
+    //   "error",
+    //   4
+    // ],
+    "vue/html-indent": [
+      "error",
+      2,
+      {
+        "attribute": 1,
+        "baseIndent": 1,
+        "closeBracket": 0,
+        "alignAttributesVertically": true,
+        "ignores": []
+      }
+    ],
+    "vue/multi-word-component-names": "off",
+    "vue/self-closing-comp": "off",
+    "vue/first-attribute-linebreak": [
+      2,
+      {
+        "singleline": "beside",
+        "multiline": "below"
+      }
+    ],
+    "vue/max-attributes-per-line": [
+      2,
+      {
+        "singleline": 10,
+        "multiline": {
+          "max": 1
+        }
+      }
+    ],
+    "indent": [
+      "error",
+      2
+    ],
+    "no-console": "off",
+    "eol-last": 0,
+    "@typescript-eslint/indent": 0,
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "vars": "local"
+      }
+    ],
+    "@typescript-eslint/no-var-requires": 0,
+    "curly": "off",
+    "react/no-unknown-property": "off",
+    "react/self-closing-comp": "off",
+    "vue/no-parsing-error": "off",
+    "no-multi-spaces": [
+      "error"
+    ],
+    "vue/prefer-import-from-vue": 0,
+    "antfu/top-level-function": 0,
+    "antfu/if-newline": 0,
+    "jsx-quotes": ["error"],
+    "@typescript-eslint/consistent-type-definitions": "off"
+  }
+}

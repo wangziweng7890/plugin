@@ -1,0 +1,28 @@
+{
+  "name": "vite-plugin-auto-optimize",
+  "version": "1.1.1",
+  "description": "auto optimize dependencies && element-ui && common npm",
+  "scripts": {
+    "build": "tsup"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/wangziweng7890/monorepo/tree/master/packages/plugins/vite-plugin-auto-optimize"
+  },
+  "homepage": "https://github.com/wangziweng7890/monorepo/tree/master/packages/plugins/vite-plugin-auto-optimize",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "devDependencies": {
+    "tsup": "^7.1.0"
+  },
+  "author": "wangziweng7890",
+  "license": "ISC"
+}

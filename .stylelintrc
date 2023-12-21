@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-prettier",
+    "stylelint-config-recess-order",
+    "stylelint-config-standard-scss",
+    "stylelint-config-recommended-vue/scss"
+  ],
+  "rules": {
+    "selector-class-pattern": null,
+    "string-quotes": "single",
+    "declaration-colon-newline-after": null,
+    "value-list-comma-newline-after": null,
+    "selector-pseudo-class-no-unknown": null,
+    "no-descending-specificity": null,
+    "scss/no-global-function-names": null
+  }
+}
+

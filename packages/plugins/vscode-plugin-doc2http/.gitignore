@@ -1,0 +1,38 @@
+### Default ###
+.DS_Store
+out
+dist
+dist2
+test/test.js
+_debug
+TODO.md
+INSTALL_DEBUG.md
+
+### Extensions ###
+doc2http-*.vsix
+
+### VS Code ###
+.vscode/**
+!.vscode/tasks.json
+!.vscode/launch.json
+
+### Node ###
+logs
+*.log
+node_modules
+build/Release
+.npm
+
+### Yarn ###
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+!.yarn/cache
+
+### Bower ###
+bower_components
+.bower-cache
+.bower-registry
+.bower-tmp

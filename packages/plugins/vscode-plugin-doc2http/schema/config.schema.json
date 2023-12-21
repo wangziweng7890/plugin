@@ -1,0 +1,13 @@
+{
+  "oneOf": [
+    {
+      "type": "array",
+      "items": {
+        "$ref": "simple-config.schema.json#/rootOption"
+      }
+    },
+    {
+      "$ref": "simple-config.schema.json#/rootOption"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+node_modules
+dist
+site-storybook
+site-vitepress/docs/.vitepress/cache
+.vscode/sftp.json
+tsconfig.tsbuildinfo
+components.d.ts

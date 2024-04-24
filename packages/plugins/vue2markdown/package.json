@@ -1,0 +1,37 @@
+{
+  "name": "vue2markdown",
+  "version": "2.0.0-beta.74",
+  "description": "根据vue组件一键生成vuepress的markdown组件文档",
+  "main": "src/index.js",
+  "bin": {
+    "vdocs": "./bin/index.js"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "boxen": "^4.2.0",
+    "chalk": "^4.0.0",
+    "commander": "^5.1.0",
+    "fs-extra": "^10.1.0",
+    "lodash": "^4.17.20",
+    "ora": "^4.0.4",
+    "shelljs": "^0.8.4",
+    "slash": "^3.0.0",
+    "json2md": "^2.0.0",
+    "glob": "^8.0.3",
+    "vue-docgen-api": "^4.60.0"
+  },
+  "keywords": [
+    "vue-press",
+    "doc",
+    "vue2doc",
+    "markdown",
+    "vuepress"
+  ],
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/wangziweng7890/monorepo/tree/master/packages/plugins/vue2markdown"
+  },
+  "homepage": "https://github.com/wangziweng7890/monorepo/tree/master/packages/plugins/vue2markdown",
+  "author": "wangziwen",
+  "license": "MIT"
+}
